@@ -33,7 +33,8 @@ for i, phone in enumerate(contacts['Mobile Phone']):
     browser.get(link)
     while len(browser.find_element_by_id("side")) < 1:
         time.sleep(30)
-        browser.find_element_by_id_xpath("//*[@id='main']/footer/div[1]/div[2]/div/div[2]").send_keys(Keys.ENTER)
+        browser.find_element_by_id_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p/span').send_keys(Keys.ENTER)
         time.sleep(30)
 
 
+         
