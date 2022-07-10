@@ -1,0 +1,20 @@
+#encoding: utf-8
+from numpy import unicode_
+import pywhatkit as wk
+import pandas as pd
+
+import urllib
+
+#import contacts from xlsx file
+contacts = pd.read_excel("contatos.xlsx")
+
+for i, phone in enumerate(contacts['Mobile Phone']):
+    FirstName = contacts['First Name'][i]
+    LastName = contacts['Last Name'][i]
+    msg = str("Oi, " + FirstName.title() + " " + LastName.title() + "! Para qualquer duvida em relação a sua matricula entre em contato com a gente pelo https://wa.me/553584796918")    
+    text = urllib.parse.quote(msg)
+    try:
+        wk.sendwhatmsg_instantly(f'+55'+phone,text)
+    except:
+        print("Erro ao enviar mensagem para " + phone)
+        continue
