@@ -1,6 +1,6 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver # pip3 install selenium
+from selenium.webdriver.common.keys import Keys # pip3 install selenium
+from webdriver_manager.chrome import ChromeDriverManager # pip3 install webdriver-manager
 
 import time
 import urllib
