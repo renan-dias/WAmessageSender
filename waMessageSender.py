@@ -14,6 +14,7 @@ desired_cap = {
 }
 
 #create a new broswer
+
 #browser = webdriver.Edge(executable_path='/Users/renand.pbarbono/Desktop/CEAD/WAmessageSender/msedgedriver',capabilities=desired_cap)
 browser  = webdriver.Chrome(ChromeDriverManager().install())
 
@@ -36,6 +37,5 @@ for i, phone in enumerate(contacts['Mobile Phone']):
         time.sleep(30)
         browser.find_element_by_id_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p/span').send_keys(Keys.ENTER)
         time.sleep(30)
-
 
          
